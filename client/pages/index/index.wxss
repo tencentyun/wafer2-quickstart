@@ -93,7 +93,7 @@ page {
 }
 
 .service {
-    position: absolute;
+    position: fixed;
     right: 40rpx;
     bottom: 40rpx;
     width: 140rpx;
