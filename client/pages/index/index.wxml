@@ -56,9 +56,4 @@
             <text>快速增加 CGI</text>
         </navigator>
     </view>
-
-    <!-- 客服接口 -->
-    <view class="service">
-        <contact-button class="service-button" type="default-light" size="60" session-from="weapp" ></contact-button>
-    </view>
 </view>
