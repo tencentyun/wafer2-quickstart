@@ -5,15 +5,16 @@ var util = require('../../utils/util.js')
 
 Page({
     data: {
-        requestResult: ''
+        requestResult: '',
+        canIUseClipboard: wx.canIUse('setClipboardData')
     },
 
     testCgi: function () {
         util.showBusy('请求中...')
         var that = this
         qcloud.request({
-            url: `https://${config.service.host}/weapp/demo`,
-            login: true,
+            url: `${config.service.host}/weapp/demo`,
+            login: false,
             success (result) {
                 util.showSuccess('请求成功完成')
                 that.setData({
@@ -25,5 +26,24 @@ Page({
                 console.log('request fail', error);
             }
         })
+    },
+
+    copyCode: function (e) {
+        var codeId = e.target.dataset.codeId
+        wx.setClipboardData({
+            data: code[codeId - 1],
+            success: function () {
+                util.showSuccess('复制成功')
+            }
+        })
     }
 })
+
+var code = [
+`router.get('/demo', controllers.demo)`,
+`module.exports = ctx => {
+    ctx.state.data = {
+        msg: 'Hello World'
+    }
+}`
+]

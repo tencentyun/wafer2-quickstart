@@ -92,3 +92,10 @@ page {
     width: 264px;
     height: 100px;
 }
+
+.guide .copyBtn {
+    width: 180rpx;
+    font-size: 20rpx;
+    margin-top: 16rpx;
+    margin-left: 0;
+}
