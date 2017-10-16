@@ -109,7 +109,9 @@ Page({
 
                     success: function(res){
                         util.showSuccess('上传图片成功')
+                        console.log(res)
                         res = JSON.parse(res.data)
+                        console.log(res)
                         that.setData({
                             imgUrl: res.data.imgUrl
                         })
