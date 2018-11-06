@@ -28,8 +28,6 @@ Wafer 团队丰富了 Wafer1 的 SDK，并针对 Wafer2 设计了更加简洁的
 
 [Wafer2 Node.js 服务端 SDK](https://github.com/tencentyun/wafer2-node-sdk)
 
-[Wafer2 Node.js 聊天室 Demo](https://github.com/tencentyun/wafer2-startup)
-
 [Wafer2 Node.js 万象优图图像识别 Demo](https://github.com/tencentyun/wafer2-ci-nodejs-demo)
 
 #### PHP
